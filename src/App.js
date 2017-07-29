@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import request from './request';
 import { ARTICLES_QUERY } from './queries';
+import Card from './Card';
 
 class App extends Component {
   // definition
@@ -20,10 +21,12 @@ class App extends Component {
 
   // Renders
   render() {
+    const articleCards = this.state.articles.map(article =>
+      <Card key={article.id} article={article} />);
     return (
       <div className="App">
         <h2>Billin code challenge</h2>
-        <pre>{JSON.stringify(this.state.articles, null, 2)}</pre>
+        {articleCards}
       </div>
     );
   }
