@@ -12,8 +12,12 @@ class Card extends Component {
     );
   }
 }
-Card.PropTypes = {
-  article: PropTypes.object.isRequired,
+Card.propTypes = {
+  article: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Card;
