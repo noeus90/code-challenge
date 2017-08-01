@@ -25,8 +25,15 @@ class App extends Component {
       <Card key={article.id} article={article} />);
     return (
       <div className="App">
-        <h2>Billin code challenge</h2>
-        {articleCards}
+        <header>
+          <h2>Billin code challenge</h2>
+        </header>
+        <div className="cards-container">
+          {articleCards}
+        </div>
+        <footer>
+          <small>Copiright Billin 2017</small>
+        </footer>
       </div>
     );
   }

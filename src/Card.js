@@ -4,16 +4,14 @@ import PropTypes from 'prop-types';
 class Card extends Component {
   render() {
     return (
-      <div>
-        <span>{this.props.article.author}</span>
-        <span>{this.props.article.excerpt}</span>
-        <span>{this.props.article.id}</span>
-        <span>{this.props.article.title}</span>
+      <div className="article-card">
+        <span className="title">{this.props.article.title}</span>
+        <span className="author">{this.props.article.author}</span>
+        <span className="excerpt">{this.props.article.excerpt}</span>
       </div>
     );
   }
 }
-
 Card.PropTypes = {
   article: PropTypes.object.isRequired,
 };
