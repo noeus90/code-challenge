@@ -3,6 +3,8 @@ import GraphHTTP from 'express-graphql';
 import bodyParser from 'body-parser';
 import Schema from './schema';
 
+import db from './db';
+
 const APP_PORT = 4000;
 
 const app = Express();
@@ -17,10 +19,21 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+const root = {
+  articles: () => {
+    return db.Article.find();
+  },
+  single: function({ id }) {
+    return db.Article.findOne({ _id : id });
+  },
+};
+
 app.use('/graphql', GraphHTTP({
   schema: Schema,
   graphiql: true,
   pretty: true,
+  rootValue: root,
 }));
 
 app.listen(APP_PORT, () => {

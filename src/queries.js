@@ -6,3 +6,13 @@ export const ARTICLES_QUERY = `{
     title
   }
 }`;
+
+export const singleArticleQuery = id => `{
+  single(id: "${id}") {
+    author
+    content
+    published
+    tags
+    title
+  }
+}`;

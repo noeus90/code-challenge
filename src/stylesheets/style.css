@@ -29,6 +29,11 @@
   width: 22%;
 }
 
+.article-card:hover {
+  background-color: #bec6d9;
+  cursor: pointer;
+}
+
 .article-card:nth-child(1,2,3,4) {
   margin-top: 2%;
 }
@@ -36,7 +41,7 @@
   margin-right: 2%;
 }
 
-.title, .author {
+.title, .author, .content {
   margin-bottom: 10px;
 }
 
@@ -52,6 +57,37 @@
 
 }
 
-.excerpt {
+.excerpt, .content {
   text-align: justify;
+}
+
+.detailed-card {
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+  width: 60%;
+}
+
+.published {
+
+}
+
+.detailed-card ul {
+  display: flex;
+  justify-content: center;
+  padding: 0
+}
+
+.detailed-card li {
+  list-style-type: none;
+  /*margin-left: 5px;*/
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+.detailed-card li:not(:first-child){
+  margin-left: 5px;
 }
