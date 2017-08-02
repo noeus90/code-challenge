@@ -1,13 +1,25 @@
 *{
   box-sizing: border-box;
+  margin: 0;
 }
 
+.header,.footer {
+  align-items: center;
+  background-color:#bec6d9;
+  border-bottom: thin groove black;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+}
 .cards-container {
+  background-color: #edf0f5;
   display: flex;
   flex-wrap: wrap;
+  padding: 5%;
 }
 
 .article-card {
+  background-color: white;
   border: 1px solid black;
   display: flex;
   flex-direction:column;
@@ -15,6 +27,10 @@
   margin-left: 2%;
   padding: 1%;
   width: 22%;
+}
+
+.article-card:nth-child(1,2,3,4) {
+  margin-top: 2%;
 }
 .article-card:nth-child(4n+0) {
   margin-right: 2%;
@@ -27,6 +43,7 @@
 .title {
   font-size: 1.5em;
   text-align: center;
+  min-height: 10vh;
 
 }
 
