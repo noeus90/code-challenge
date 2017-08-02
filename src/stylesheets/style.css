@@ -11,6 +11,7 @@
   height: 10vh;
   justify-content: center;
 }
+
 .cards-container {
   background-color: #edf0f5;
   display: flex;
@@ -18,14 +19,17 @@
   padding: 5%;
 }
 
-.article-card {
+.article-card, .detailed-card {
   background-color: white;
   border: 1px solid black;
   display: flex;
   flex-direction:column;
+  padding: 1%;
+}
+
+.article-card {
   margin-bottom: 1%;
   margin-left: 2%;
-  padding: 1%;
   width: 22%;
 }
 
@@ -37,6 +41,7 @@
 .article-card:nth-child(1,2,3,4) {
   margin-top: 2%;
 }
+
 .article-card:nth-child(4n+0) {
   margin-right: 2%;
 }
@@ -51,10 +56,8 @@
   min-height: 10vh;
 
 }
-
 .author {
   font-size: 1.2em;
-
 }
 
 .excerpt, .content {
@@ -62,17 +65,8 @@
 }
 
 .detailed-card {
-  background-color: white;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
   margin: 1%;
-  padding: 1%;
   width: 60%;
-}
-
-.published {
-
 }
 
 .detailed-card ul {
@@ -82,12 +76,12 @@
 }
 
 .detailed-card li {
-  list-style-type: none;
-  /*margin-left: 5px;*/
   background-color: lightgray;
   border-radius: 5px;
+  list-style-type: none;
   padding: 5px;
 }
+
 .detailed-card li:not(:first-child){
   margin-left: 5px;
 }
